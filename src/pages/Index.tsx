@@ -3,14 +3,42 @@ import { Chatbot } from "@/components/Chatbot";
 import { ScrollAnimations } from "@/components/ScrollAnimations";
 import { SocialMediaSidebar } from "@/components/SocialMediaSidebar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, Mail, Github, Linkedin, Twitter, CheckCircle2, MessageCircle, TrendingUp, Search, Palette, Briefcase, GraduationCap, ImageIcon, Globe, Bot, Smartphone, Code2, Database, Layout, Server, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Mail,
+  Github,
+  Linkedin,
+  Twitter,
+  CheckCircle2,
+  MessageCircle,
+  TrendingUp,
+  Search,
+  Palette,
+  Briefcase,
+  GraduationCap,
+  ImageIcon,
+  Globe,
+  Bot,
+  Smartphone,
+  Code2,
+  Database,
+  Layout,
+  Server,
+  Zap,
+} from "lucide-react";
 import heroImage from "@/assets/hero-profile.jpg";
 
 const Index = () => {
-  const phoneNumber = "+917382592333"; // WhatsApp number
+  const phoneNumber = "+917382591233"; // WhatsApp number
   const displayPhone1 = "+91 7382591233";
   const displayPhone2 = "+91 9701290472";
   const email = "naveenksarill@gmail.com";
@@ -19,11 +47,13 @@ const Index = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const name = formData.get('name');
-    const userEmail = formData.get('email');
-    const message = formData.get('message');
-    
-    const mailtoLink = `mailto:${email}?subject=Message from ${name}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${userEmail}\n\nMessage:\n${message}`)}`;
+    const name = formData.get("name");
+    const userEmail = formData.get("email");
+    const message = formData.get("message");
+
+    const mailtoLink = `mailto:${email}?subject=Message from ${name}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${userEmail}\n\nMessage:\n${message}`
+    )}`;
     window.location.href = mailtoLink;
   };
 
@@ -32,78 +62,92 @@ const Index = () => {
       <ScrollAnimations />
       {/* <SocialMediaSidebar /> */}
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative z-10">
+      <section
+        id="home"
+        className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative z-10"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in-up">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-               Welcome to {" "}
+                Welcome to{" "}
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   OrBoreh
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground">
-                A creative professional specializing in digital marketing, SEO, brand design, 
-                and business solutions. I help businesses grow their online presence and 
-                achieve their goals.
+                A creative professional specializing in digital marketing, SEO,
+                brand design, and business solutions. I help businesses grow
+                their online presence and achieve their goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" className="gap-2" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="gap-2"
+                  onClick={() =>
+                    document
+                      .getElementById("services")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
                   View Services <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="gap-2"
-                  onClick={() => window.location.href = `mailto:${email}?subject=Consultation Request`}
+                  onClick={() =>
+                    (window.location.href = `mailto:${email}?subject=Consultation Request`)
+                  }
                 >
                   <Mail className="h-5 w-5" />
                   Schedule a Consultation
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
+                <Button
+                  variant="outline"
+                  size="lg"
                   className="gap-2"
-                  onClick={() => window.location.href = `mailto:${email}`}
+                  onClick={() => (window.location.href = `mailto:${email}`)}
                 >
                   <Mail className="h-5 w-5" />
                   Get in Touch
                 </Button>
               </div>
-              
+
               {/* Social Links */}
               <div className="flex gap-4 pt-4">
-                <a 
-                  href="https://github.com/kevinnani" 
-                  target="_blank" 
+                <a
+                  // href="#"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
                 >
                   <Github className="h-5 w-5" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all"
                 >
                   <Twitter className="h-5 w-5" />
                 </a>
               </div>
             </div>
-            
+
             <div className="relative animate-scale-in">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-3xl animate-pulse"></div>
               <div className="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-3xl opacity-20 blur-2xl animate-glow"></div>
-              <img 
-                src={heroImage} 
-                alt="Kevin Nani - Professional Profile" 
+              <img
+                src={heroImage}
+                alt="Kevin Nani - Professional Profile"
                 className="relative rounded-3xl shadow-2xl w-full h-auto object-cover "
               />
             </div>
@@ -112,78 +156,92 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 relative z-10">
+      <section
+        id="services"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30 relative z-10"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Services That Drive Results
             </h2>
             <p className="text-xl text-muted-foreground">
-              From marketing to design, I offer comprehensive freelancing services
+              From marketing to design, I offer comprehensive freelancing
+              services
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-               {
+              {
                 icon: Palette,
                 title: "Graphic Design",
-                description: "Transform ideas into stunning visuals that capture attention and communicate your message effectively."
+                description:
+                  "Transform ideas into stunning visuals that capture attention and communicate your message effectively.",
               },
               {
                 icon: TrendingUp,
                 title: "Digital Marketing",
-                description: "Drive growth with targeted campaigns that increase brand awareness and convert visitors into loyal customers."
+                description:
+                  "Drive growth with targeted campaigns that increase brand awareness and convert visitors into loyal customers.",
               },
-                {
+              {
                 icon: Globe,
                 title: "Website Design",
-                description: "Build responsive static and dynamic websites that deliver exceptional user experiences and drive conversions."
+                description:
+                  "Build responsive static and dynamic websites that deliver exceptional user experiences and drive conversions.",
               },
               {
                 icon: Search,
                 title: "SEO & Analytics",
-                description: "Boost your search rankings and gain valuable insights to make data-driven decisions that maximize ROI."
+                description:
+                  "Boost your search rankings and gain valuable insights to make data-driven decisions that maximize ROI.",
               },
               {
                 icon: Palette,
                 title: "Brand Design",
-                description: "Create a memorable brand identity that resonates with your audience and sets you apart from competitors."
+                description:
+                  "Create a memorable brand identity that resonates with your audience and sets you apart from competitors.",
               },
               {
                 icon: Briefcase,
                 title: "Business Strategy",
-                description: "Develop strategic roadmaps that align with your goals and unlock new opportunities for sustainable growth."
+                description:
+                  "Develop strategic roadmaps that align with your goals and unlock new opportunities for sustainable growth.",
               },
               {
                 icon: GraduationCap,
                 title: "Content Creation",
-                description: "Engage your audience with compelling content that tells your story and drives meaningful interactions."
+                description:
+                  "Engage your audience with compelling content that tells your story and drives meaningful interactions.",
               },
               {
                 icon: ImageIcon,
                 title: "Social Media",
-                description: "Build a strong social presence that connects with your community and amplifies your brand message."
+                description:
+                  "Build a strong social presence that connects with your community and amplifies your brand message.",
               },
-             
-            
+
               {
                 icon: Bot,
                 title: "AI Services",
-                description: "Leverage cutting-edge AI solutions to automate processes, enhance customer experiences, and gain competitive advantages."
+                description:
+                  "Leverage cutting-edge AI solutions to automate processes, enhance customer experiences, and gain competitive advantages.",
               },
               {
                 icon: Smartphone,
                 title: "Chatbots",
-                description: "Implement intelligent chatbots that provide 24/7 customer support, qualify leads, and boost engagement."
+                description:
+                  "Implement intelligent chatbots that provide 24/7 customer support, qualify leads, and boost engagement.",
               },
               {
                 icon: Briefcase,
                 title: "Consulting",
-                description: "Get expert guidance to navigate challenges, optimize operations, and achieve your business objectives."
-              }
+                description:
+                  "Get expert guidance to navigate challenges, optimize operations, and achieve your business objectives.",
+              },
             ].map((service, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-105 border-border bg-card animate-fade-in relative overflow-hidden group"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -198,24 +256,26 @@ const Index = () => {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <Button 
-                    variant="hero" 
-                    className="w-full gap-2"
-                    onClick={() => window.open(`https://wa.me/${phoneNumber}?text=Hi, I'm interested in ${service.title}`, '_blank')}
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    Book via WhatsApp
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="w-full gap-2"
-                    onClick={() => window.location.href = `mailto:${email}?subject=Booking: ${service.title}`}
-                  >
-                    <Mail className="h-4 w-4" />
-                    Book via Email
-                  </Button>
-                </CardContent>
+                <CardContent className="space-y-3 relative z-[9999]">
+  <Button 
+    variant="hero" 
+    className="w-full gap-2 cursor-pointer z-[9999]"
+    onClick={() => window.open(`https://wa.me/${phoneNumber}?text=Hi, I'm interested in ${service.title}`, '_blank')}
+  >
+    <MessageCircle className="h-4 w-4" />
+    Book via WhatsApp
+  </Button>
+
+  <Button 
+    variant="outline" 
+    className="w-full gap-2 cursor-pointer z-[9999]"
+    onClick={() => window.location.href = `mailto:${email}?subject=Booking: ${service.title}`}
+  >
+    <Mail className="h-4 w-4" />
+    Book via Email
+  </Button>
+</CardContent>
+
               </Card>
             ))}
           </div>
@@ -230,86 +290,87 @@ const Index = () => {
               My Tech Stack
             </h2>
             <p className="text-xl text-muted-foreground">
-              Technologies and frameworks I use to build exceptional digital experiences
+              Technologies and frameworks I use to build exceptional digital
+              experiences
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Code2,
                 title: "HTML & CSS",
                 description: "Semantic HTML5 and modern CSS3 with animations",
-                skills: ["HTML5", "CSS3", "Flexbox", "Grid"]
+                skills: ["HTML5", "CSS3", "Flexbox", "Grid"],
               },
               {
                 icon: Zap,
                 title: "JavaScript",
                 description: "Modern ES6+ JavaScript for dynamic applications",
-                skills: ["ES6+", "DOM", "Async/Await", "APIs"]
+                skills: ["ES6+", "DOM", "Async/Await", "APIs"],
               },
               {
                 icon: Code2,
                 title: "React.js",
                 description: "Building scalable single-page applications",
-                skills: ["Hooks", "Redux", "Context API", "Router"]
+                skills: ["Hooks", "Redux", "Context API", "Router"],
               },
               {
                 icon: Server,
                 title: "Node.js",
                 description: "Server-side JavaScript for backend services",
-                skills: ["Express", "REST APIs", "Auth", "Middleware"]
+                skills: ["Express", "REST APIs", "Auth", "Middleware"],
               },
               {
                 icon: Database,
                 title: "MySQL",
                 description: "Relational database management",
-                skills: ["SQL", "Design", "Joins", "Optimization"]
+                skills: ["SQL", "Design", "Joins", "Optimization"],
               },
               {
                 icon: Palette,
                 title: "Tailwind CSS",
                 description: "Utility-first CSS framework",
-                skills: ["Responsive", "Components", "Dark Mode"]
+                skills: ["Responsive", "Components", "Dark Mode"],
               },
               {
                 icon: Layout,
                 title: "Bootstrap",
                 description: "Responsive web design framework",
-                skills: ["Grid", "Components", "Utilities"]
+                skills: ["Grid", "Components", "Utilities"],
               },
               {
                 icon: Smartphone,
                 title: "Material UI",
                 description: "React Material Design components",
-                skills: ["Components", "Theming", "Icons"]
+                skills: ["Components", "Theming", "Icons"],
               },
               {
                 icon: Palette,
                 title: "Adobe Photoshop",
                 description: "Professional image editing",
-                skills: ["Editing", "Digital Art", "Retouching"]
+                skills: ["Editing", "Digital Art", "Retouching"],
               },
               {
                 icon: Palette,
                 title: "Adobe Illustrator",
                 description: "Vector graphics design",
-                skills: ["Logos", "Illustrations", "Typography"]
+                skills: ["Logos", "Illustrations", "Typography"],
               },
               {
                 icon: Layout,
                 title: "Figma",
                 description: "Collaborative interface design",
-                skills: ["UI Design", "Prototyping", "Wireframes"]
+                skills: ["UI Design", "Prototyping", "Wireframes"],
               },
               {
                 icon: Palette,
                 title: "Canva",
                 description: "Easy graphic design platform",
-                skills: ["Social Media", "Marketing", "Posters"]
-              }
+                skills: ["Social Media", "Marketing", "Posters"],
+              },
             ].map((tech, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
@@ -319,12 +380,17 @@ const Index = () => {
                     <tech.icon className="h-8 w-8 text-primary" />
                   </div>
                   <CardTitle className="text-lg">{tech.title}</CardTitle>
-                  <CardDescription className="text-sm">{tech.description}</CardDescription>
+                  <CardDescription className="text-sm">
+                    {tech.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {tech.skills.map((skill, idx) => (
-                      <span key={idx} className="text-xs px-2 py-1 rounded-md bg-primary/10 text-primary">
+                      <span
+                        key={idx}
+                        className="text-xs px-2 py-1 rounded-md bg-primary/10 text-primary"
+                      >
                         {skill}
                       </span>
                     ))}
@@ -353,26 +419,44 @@ const Index = () => {
                 <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
                   <CheckCircle2 className="h-10 w-10 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-5xl font-bold mb-2 text-primary">150+</CardTitle>
-                <CardDescription className="text-lg">Projects Completed</CardDescription>
+                <CardTitle className="text-5xl font-bold mb-2 text-primary">
+                  150+
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  Projects Completed
+                </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="text-center hover:shadow-xl transition-all hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Card
+              className="text-center hover:shadow-xl transition-all hover:-translate-y-2 animate-fade-in"
+              style={{ animationDelay: "0.1s" }}
+            >
               <CardHeader>
                 <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
                   <TrendingUp className="h-10 w-10 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-5xl font-bold mb-2 text-primary">120+</CardTitle>
-                <CardDescription className="text-lg">Happy Customers</CardDescription>
+                <CardTitle className="text-5xl font-bold mb-2 text-primary">
+                  120+
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  Happy Customers
+                </CardDescription>
               </CardHeader>
             </Card>
-            <Card className="text-center hover:shadow-xl transition-all hover:-translate-y-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <Card
+              className="text-center hover:shadow-xl transition-all hover:-translate-y-2 animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
               <CardHeader>
                 <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mb-4">
                   <Briefcase className="h-10 w-10 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-5xl font-bold mb-2 text-primary">3+</CardTitle>
-                <CardDescription className="text-lg">Years Experience</CardDescription>
+                <CardTitle className="text-5xl font-bold mb-2 text-primary">
+                  3+
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  Years Experience
+                </CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -444,11 +528,13 @@ const Index = () => {
               Let's Build Something Great Together
             </h2>
             <p className="text-xl text-muted-foreground mb-4">
-              Whether you need marketing expertise, design services, or business consulting, 
-              I'm here to help bring your vision to life.
+              Whether you need marketing expertise, design services, or business
+              consulting, I'm here to help bring your vision to life.
             </p>
             <div className="space-y-2 text-lg">
-              <p className="text-primary font-semibold">Contact No: {displayPhone1} | {displayPhone2}</p>
+              <p className="text-primary font-semibold">
+                Contact No: {displayPhone1} | {displayPhone2}
+              </p>
               <p className="text-primary font-semibold">Email: {email}</p>
             </div>
           </div>
@@ -463,12 +549,27 @@ const Index = () => {
                   <Input name="name" placeholder="Your Name" required />
                 </div>
                 <div>
-                  <Input name="email" type="email" placeholder="Your Email" required />
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                  />
                 </div>
                 <div>
-                  <Textarea name="message" placeholder="Your Message" rows={6} required />
+                  <Textarea
+                    name="message"
+                    placeholder="Your Message"
+                    rows={6}
+                    required
+                  />
                 </div>
-                <Button type="submit" variant="hero" size="lg" className="w-full gap-2">
+                <Button
+                  type="submit"
+                  variant="hero"
+                  size="lg"
+                  className="w-full gap-2"
+                >
                   Send Message <ArrowRight className="h-5 w-5" />
                 </Button>
               </form>

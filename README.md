@@ -1,26 +1,20 @@
-# Welcome to your Lovable project
+OrBoreh
+Or = “Light” → “Light of the Creator”
+
 
 ## Project info
+git add .
+git commit -m "Updated chatbot animation"
+git push
 
-**URL**: https://lovable.dev/projects/6206ffd5-ec9f-42df-9de4-c3d017b2a7ce
 
-## How can I edit this code?
+git add .
+git commit -m "Updated chatbot animation"
+git push
 
-There are several ways of editing your application.
+npm run build
+npx vercel --prod
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6206ffd5-ec9f-42df-9de4-c3d017b2a7ce) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
@@ -71,3 +65,6 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+
+
